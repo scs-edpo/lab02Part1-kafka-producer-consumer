@@ -46,7 +46,7 @@ For OSX and Linux, you can simply run:
 
 ```bash
 $ cd DIR_WHERE_MY_LAB_IS
-$ docker run -it --rm --name lab02 -v "$PWD":/usr/src/lab02 -w /usr/src/lab02 maven:3-jdk-8 bash
+$ docker run -it --rm --name lab02 -v "$PWD":/usr/src/lab02 -w /usr/src/lab02 maven:3-jdk-11 bash
 root@58b8ca1d738c:/usr/src/lesson#
 ```
 

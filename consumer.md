@@ -87,7 +87,7 @@ Like the first part of this lab, we will use the IDE and [Maven](https://maven.a
 or if you don't have maven installed and want to run it through docker...
 
     ```sh
-    $ docker run -it --rm --name lesson -v "$PWD":/usr/src/lab02 -w /usr/src/lab02 maven:3-jdk-11 mvn clean package
+    $ docker run -it --rm --name lab02 -v "$PWD":/usr/src/lab02 -w /usr/src/lab02 maven:3-jdk-11 mvn clean package
     ```
 
 1. For convenience, the project is set up so that the `package` target produces a single executable: `target/consumer`. Run the consumer:
