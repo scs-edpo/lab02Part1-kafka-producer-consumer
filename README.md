@@ -1,4 +1,4 @@
-# lab02-kafka-producer-consumer
+# lab02Part1-kafka-producer-consumer
 
 This lab is adapted from [here](https://github.com/SciSpike/kafka-lab).
 
