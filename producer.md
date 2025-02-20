@@ -93,20 +93,20 @@ All the directory references in this lab are relative to where you extracted the
 2. Start the Kafka and Zookeeper processes using Docker Compose:
 
     ```
-    $ docker-compose up
+    $ docker compose up
     ```
 
 3. Open an additional terminal window in the lab directory, `docker/`. We are going to create two topics that will be used in the Producer program. Run the following commands:
 
     ```
-    $ docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic user-events
-    $ docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic global-events
+    $ docker compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic user-events
+    $ docker compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1 --topic global-events
     ```
 
 4. List the topics to double check they were created without any issues.
 
     ```
-    $ docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server kafka:9092
+    $ docker compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server kafka:9092
     global-events
     user-events
     ```

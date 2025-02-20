@@ -106,7 +106,7 @@ or if you don't have maven installed and want to run it through docker...
 1. Finally, change back into the `docker/` directory in order to shut down the Kafka and Zookeeper servers.
 
     ```
-    $ docker-compose down
+    $ docker compose down
     ```
 
 ### Conclusion
