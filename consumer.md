@@ -78,7 +78,7 @@ Like the first part of this lab, we will use the IDE and [Maven](https://maven.a
 
     The returned object of the `poll` method is an `Iterable` that contains all the new records. From there our example lab just uses a `switch` statement to process each type of topic. In a real application, you would do something more interesting here than output the results to `stdout`.
 
-1. Now we are ready to compile and run the lab via the IDE. Alternatively, in a terminal, change to the `lab` directory and run the following  [Maven](https://maven.apache.org/) targets:
+1. Now we are ready to compile and run the lab via the IDE. Alternatively, in a terminal, change to the `consumer` directory and run the following  [Maven](https://maven.apache.org/) targets:
 
     ```sh
     mvn clean package
@@ -103,7 +103,7 @@ or if you don't have maven installed and want to run it through docker...
 
     After the consumer has processed all messages, start the producer again in another terminal window and you will see the consumer output the messages almost immediately. The consumer will run indefinitely until you press `Ctrl-C` in the terminal window.
 
-1. Finally, change back into the `docker/` directory in order to shut down the Kafka and Zookeeper servers.
+1. Finally, change back into the `docker/` directory in order to shut down the Kafka server.
 
     ```
     $ docker compose down
