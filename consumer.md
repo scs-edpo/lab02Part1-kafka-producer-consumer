@@ -43,7 +43,7 @@ Like the first part of this lab, we will use the IDE and [Maven](https://maven.a
     * `key.deserializer` is the deserializer class for key that implements the `Deserializer` interface.
     * `value.deserializer` is the deserializer class for value that implements the `Deserializer` interface.
     * `group.id` is a string that uniquely identifies the group of consumer processes to which this consumer belongs. In our case, we are just using the value of `test` for an example.
-    * `auto.offset.reset` determines what to do when there is no initial offset in Zookeeper or Kafka from which to read records. The first time that a consumer is run will be the first time that the Kafka broker has seen the consumer group that the consumer is using. The default behavior is to position newly created consumer groups at the end of existing data which means that the producer data that we ran previously would not be read. By setting this to `earliest`, we are telling the consumer to reset the offset to the smallest offset.
+    * `auto.offset.reset` determines what to do when there is no initial offset in Kafka from which to read records. The first time that a consumer is run will be the first time that the Kafka broker has seen the consumer group that the consumer is using. The default behavior is to position newly created consumer groups at the end of existing data which means that the producer data that we ran previously would not be read. By setting this to `earliest`, we are telling the consumer to reset the offset to the smallest offset.
 
     Like the producer, there are [many configuration options available for Kafka consumer](http://kafka.apache.org/documentation.html#consumerconfigs) that should be explored for a production environment.
 
