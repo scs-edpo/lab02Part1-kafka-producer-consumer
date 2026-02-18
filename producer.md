@@ -1,6 +1,6 @@
 # Developing Kafka Applications - Producer API
 
-In this part of the lab, you will create a Kafka Producer using the Java API. The next part will be the creation of the Kafka Consumer so that you can see an end to end example using the API.
+In this part of the lab, **you will create a Kafka Producer using the Java API**. The next part will be the creation of the Kafka Consumer so that you can see an end to end example using the API.
 
 ## Objectives
 
@@ -22,10 +22,11 @@ All the directory references in this lab are relative to where you extracted the
 1. Start the Kafka process using Docker Compose:
 
     ```
+    $ cd docker
     $ docker compose up
     ```
 
-2. Open an additional terminal window in the lab directory, `docker/`. We are going to create two topics that will be used in the Producer program. Run the following commands:
+2. Open an additional terminal window in the lab directory, `docker/`. **We are going to create two topics that will be used in the Producer program**. Run the following commands:
 
     ```
     $ docker compose exec kafka kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic user-events
@@ -40,13 +41,13 @@ All the directory references in this lab are relative to where you extracted the
     user-events
     ```
 
-4. Open `producer/pom.xml` in your IntelliJ. The current stable version of Kafka is 3.1.0. Maven is being used for dependency management in this lab. It includes the following in the `pom.xml` for Kafka:
+4. Open `producer/pom.xml` in your IntelliJ. The current stable version of Kafka is 3.9.0. Maven is being used for dependency management in this lab. It includes the following in the `pom.xml` for Kafka:
 
     ```xml
     <dependency>
         <groupId>org.apache.kafka</groupId>
         <artifactId>kafka-clients</artifactId>
-        <version>3.1.0</version>
+        <version>3.9.0</version>
     </dependency>
     <dependency>
         <groupId>com.google.guava</groupId>
